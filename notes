@@ -1,0 +1,461 @@
+document.write("Hello World");
+            console.log("Hello this is the output to the console");
+
+*    Variables
+var value;
+           value = true;
+            document.write(name);
+
+*  Operations
+     var a = 10;
+          var b = 20;
+          var result;
+          result = a * b;
+          document.write(result); 
+
+*   Concatenation(Joining two strings together)
+      var a = "John";
+         var b = "Smith";
+         var result;
+         result = a + b;
+         document.write(result);
+
+*   Comments
+        name = "John";//This is the description of a name
+        (Single line comments)
+
+        /* name = "John";
+            document.write(name);*/
+        (Full paragraph comments)
+
+*   Objects
+        var person = {
+                    name: "John" , age: 18 , job: "Doctor" , car:"BMW"
+                };
+
+                document.write(person.name)
+
+*   If statement
+        if (condition){
+            statements
+        }
+
+        eg:  var myNum = 7;
+                var myNum = 10;
+                if (myNum1 < myNum2) {
+                    alert("Javascript is easy to learn");
+                }
+
+        *   For loop
+        for (statement 1; statement 2; statement 3)
+        {
+            code block to be executed
+        }
+
+        eg:  for (i=1; i<=5; i++) {
+                    document.write(i + "<br/>")
+                }
+            (prints value from 1-5)
+
+        eg:    var x = 0
+                for(;x<=20; x+=2) {
+                    document.write(x);
+                }
+            (prints even numbers from 0-20)
+
+*  While loop
+
+        while (condition){
+            code block
+        }
+
+* Break statement
+
+        for (i = 0; i <= 10; i++) {
+                if(i == 5){
+                    break;
+                }
+                document.write(i + "<br/>");
+            }
+            (once print result gets to 5,it breaks)
+
+* Function
+
+        function display(){
+                        document.write("Hi there");
+                    }
+
+                </script>
+                <button onclick="display()">Click Here</button>
+        (Onclick,Displays Hi There)
+
+*         var x = "John Smith";
+        document.write(x.length);
+        ('x.lenght' is used to calculate the lenght of a string including the spaces)
+
+*  Escape character
+        var x = "We are the \"players\" of the century";
+        (In the above code the two backlashes in 'players' tells JS the quotation is not the actual JS double quote or any thing else) 
+
+*   Replace character
+        var x = "My name is John, this is John";
+            var y = x.replace("John","Sam");
+            document.write(y);
+
+*  To Uppercase and Lowercase
+        var x = "My name is John, this is John";
+            var y = x.toUpperCase();
+            document.write(y);
+
+*  Converts number to strings
+        var number = 100;
+          var x = number.toString();
+          document.write(x);
+
+*  Fixes the no of digits to a certain decimal point value
+        var x = 22/7;
+            x = x.toFixed(1);
+            document.write(x);
+
+*  Converting string value to an integer value and vice versa using the 'parseInt()' method
+        var a = "100";
+            var b = 200;
+            var c = parseInt(a) + b;
+            document.write(c);
+
+*  Rounding off a number
+        document.write(Math.round(4.7));
+
+*  Calculating the power of a function
+        document.write(Math.pow(10,2));
+        (10 to the power 2 i.e 10*10)
+
+* Square root
+        document.write(Math.sqrt(49));
+
+* Calculating the absolute value 'neither +ve nor -ve'
+        document.write(Math.abs(-469));
+
+* Rounding up to the next whole using ceil and the next lower using floor
+        document.write(Math.ceil(3.4));
+ 
+* Random number from 0-1
+        document.write(Math.ceil(3.4));
+
+* Random no from 1-10 and vice versa
+        document.write(Math.ceil(Math.random()*10));
+
+* Project program that prints the current time to the browser once every second.
+        function printTime() {
+                var d = new Date();
+                var hours = d.getHours();
+                var mins = d.getMinutes();
+                var secs = d.getSeconds();
+                document.body .innerHTML = hours+":" 
+                +mins+":" +secs;
+            }
+            setIntervals(printTime, 1000);   
+
+* Adding one more element to an array using .push
+        var names = ["John" , "Sam" , "Rob"];
+                    names.push("Chris")
+                    document.write(names[3]);
+
+* Joining two arrays using the '.concat' and deleting within an array
+        var names = ["John" , "Sam" , "Rob"];
+                    var numbers = [1, 2, 3];
+                    delete numbers[1];
+                    var new_array = names.concat(numbers);
+                    var x = new_array.toString();
+                    document.write(x); 
+
+* Using the '</br>' tag to  break a code the the next line of "lenght" and change the entire sentence to uppercase
+        var message = "we are \"The gems\" of this country ";
+                document.write(message);
+                var length = message.length;
+                document.write("</br>"+length);
+                document.write(message.toUppercase());
+
+* "=="  equals-to Sign
+        "!="  not equals-to
+        
+* Creation of an object
+        var Person ={
+                    name : "Sam" ,
+                    age : 29 ,
+                    gender : "Male" 
+                }
+        (The var title 'person' here is the object)
+
+* The AND '&&' and OR '||' operator
+        eg: if(age >= 15 && gender == "Female"){
+                    document.write("Allowed");
+                }
+                else{
+                    document.write("Restricted");
+                }
+        The and operator becomes true in the if block if both conditions there are satisfied,unless the else statement is carried out
+        But the OR operator is true once one of the conditons is true.
+        
+
+*  Rating system using switch case 
+              var rating = 3;
+
+            switch(rating){
+
+                case 1: document.write("Very Poor");
+                    break;
+                case 2: document.write("Poor");
+                    break;
+                case 3: document.write("Decent");
+                    break;
+                case 4: document.write("Good");
+                    break;
+                case 5: document.write("Excellent");
+                    break;
+            }
+
+                Output here displays 'Decent'
+
+* To display a 10 digit number with exception
+            var number = "1234567890";
+
+          try{
+
+              if(number.length != 10){
+                  throw("Please enter a 10 digit number");
+              }
+              else{
+                  document.write(number);
+              }
+          }
+          catch(e){
+              alert("Error"+e);
+          }
+          finally{
+              document.write("<br> This is always going to be executed");
+          }
+
+- 'Finally' block contains the code/text that is acually going to be executed no matter what
+- 'Catch' block catches the exception which has been thrown
+- 'try' block contains the code to be tested for exception
+
+ 
+* Using 'regular expression' to replace a word with another word
+        var message = "I like apple";
+                    var pat = /apple/i;
+                    var new_string = message.replace(pat, "Mango");
+                    document.write(new_string);
+        "replace"
+
+* Hoisting 
+        x = 10;
+                document.write(x);
+                var x;
+
+        The example above simply tells nothing but declaring the Variable later, which is called
+        Hoisting. By hoisting the code is still functional but is not the best practice.
+
+* camelCase naming convention for variable name and function name
+            var firstName = "John" ;
+                functon addNumbers(){
+                    
+                }  
+* While declaring the global variables,capslock is used
+         var NUMBERS;
+
+*   Best practices
+        -Always declare local variable and should always be on top
+        -Initialize variables always even if not used
+        eg:             var counter = 0;
+                    var name = ""
+        -Beware of automatic type conversion
+            eg:   var a = "hello";
+                    a = 10;
+
+* DOM Methods
+            //finds element by id
+            document.getElementById(id);
+            eg: 
+            var elem =
+            document .getElementById("demo");
+            elem.innerHTML = "Hello World!";
+
+            //finds element by tag name
+            document.getElementByTagName(name);
+            eg1:
+            <p id="pr"></p>
+                <p id="dr"></p>
+
+                <script type="text/javascript">
+
+                    document.getElementById("pr").innerHTML = "This is a paragraph";
+                    document.getElementByTagName("p")[0].innerHTML="This is the first paragraph";
+                </script>
+            eg2:
+            <p>hi</p>
+            <p>hello</p>
+            <p>hi</p>
+
+                <script type="text/javascript">
+                var arr = document.getElementsByTagName("p");
+                for (var x = 0; x < arr.length; x++){
+                    arr[x].innerHTML = "Hi there";
+                }
+                </script>
+
+* Accessing and Changing the style
+        <P id="p1">Hi There</P>
+
+            <script type="text/javascript">
+
+            document.getElementById("p1").style.color = "blue";
+
+            </script>
+        
+* DOM Events
+        <h1 onclick="this.innerHTML = 'You clicked here'">Click here</h1>
+
+        <script type="text/javascript">
+
+        </script>
+        
+        "Changing the inner styling too"
+         <h1 onclick="this.style.color = 'red'">Click here</h1>
+
+        <script type="text/javascript">
+
+        </script>
+
+        "Initiating an alert onclick"
+         <h1 onclick="alert('hi there')">Click here</h1>
+
+        <script type="text/javascript">
+
+        </script>
+
+* Adding and Removing Event Listeners
+       (note: two or more event isteners can be added)
+       FORMAT: addEventListener(event, function);
+
+        <button id="newButton">Cick Here</button>
+
+        <script type="text/javascript">
+            
+            function displayalert(){
+                alert("Button Click");
+                btn.removeEventListener("mouseover",displayalert);
+            }
+            
+            document.getElementById("newButton").addEventListener("click",displayalert);
+            addEventListener("mouseover",displayalert);
+          
+
+        </script>
+
+- Parent nodes are also known as root nodes(HEAD)
+- .appendChild(newNode) adds a new child node to an element as the child node
+
+* Creating a text which changes onclick of a button
+            <head>
+        <title id="Demo">
+            My Title
+        </title>
+        <script type="text/javascript">
+            function change(){
+                document.getElementById("para").innerHTML = "This is the new text";
+            }
+        
+        </script>
+        </head>
+
+        <body>
+        
+            <p id="para">This is a paragraph</p>
+            <button onclick="change()" id="buttonone">Click here</button>
+
+            
+        </body>
+
+* Deleting the Child of the element
+        <div id="divone">
+          <P id="para1">  Hello this is paragraph one</P>
+          <P id="para2">  Hello this is another paragraph one</P>
+
+        </div>
+       
+       
+       <script type="text/javascript">
+         
+            var parent = document.getElementById("divone");
+            var child = document.getElementById("para1");
+            parent.removeChild(child);
+
+        </script>
+
+* Replacing Child
+            <div id="divone">
+                <P id="para1">  Hello this is paragraph one</P>
+                <P id="para2">  Hello this is another paragraph one</P>
+
+                </div>
+            
+            
+            <script type="text/javascript">
+                
+                var p = document.createElement("p");
+                var node = document.createTextNode("This is new");
+                p.appendChild(node);
+
+
+                var parent = document.getElementById("divone");
+                var child = document.getElementById("para1");
+                parent.replaceChild(p,child);
+                </script>
+* Image slider
+                    <div>
+                <button onclick="prev()"> Prev </button>
+                <img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
+                <button onclick="next()"> Next </button>
+                </div>
+            
+            
+            <script type="text/javascript">
+                var images = [
+                    "http://www.sololearn.com/uploads/slider/1.jpg" ,
+                    "http://www.sololearn.com/uploads/slider/2.jpg" ,
+                    "http://www.sololearn.com/uploads/slider/3.jpg"
+                    ];
+                var num = 0;
+
+                function next(){
+                var slider = document.getElementById("slider");
+                num++;
+                if(num >= images.length){
+                    num = 0;
+                }
+                slider.src = images[num];
+                }
+
+                function prev(){
+                var slider = document.getElementById("slider");
+                num--;
+                if(num < 0){
+                    num = images.length-1;
+                }
+                slider.src = images[num];
+                }
+                </script>              
+
+* Browser object model - BOM
+
+* Getting access to the URL and pathname of the current website/page
+             <script type="text/javascript">
+            
+                document.write(window.location.href);
+
+            </script>
+
+* Converting a string to a number,we use the parseInt() method
+
+
